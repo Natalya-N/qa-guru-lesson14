@@ -26,6 +26,11 @@ public class HeaderMenuComponent {
     }
 
     public void textSearchStringAndPressEnter(String query) {
-        searchMenuFocused.type(query).pressEnter();
+        searchMenu.val(query).pressEnter();
+        searchMenu.shouldHave(value(query));
+    }
+
+    public void clickOnLoginMenu() {
+        signInButton.click();
     }
 }

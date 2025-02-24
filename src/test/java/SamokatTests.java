@@ -41,4 +41,18 @@ public class SamokatTests extends TestBase {
         });
     }
 
+    @Tag("simple")
+    @Test
+    void checkLoginDrawer() {
+        step("Open page", () -> {
+            mainPage.openPage();
+        });
+        step("Open drawer and check elements", () -> {
+            mainPage.openLoginDrawer();
+        });
+        step("Close drawer", () -> {
+            mainPage.closeLoginDrawer();
+        });
+    }
+
 }
