@@ -15,10 +15,10 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
         Configuration.baseUrl = "https://samokat.ru";
-        /*Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
+        Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserVersion = System.getProperty("browserVersion", "120");
-        Configuration.remote = "https://user1:1234@" + System.getProperty("remoteHost") + "wd/hub";*/
+        Configuration.remote = "https://user1:1234@" + System.getProperty("remoteHost") + "wd/hub";
         Configuration.pageLoadStrategy = "eager";
         SelenideLogger.addListener("allure", new AllureSelenide());
         Configuration.timeout = 10000;
