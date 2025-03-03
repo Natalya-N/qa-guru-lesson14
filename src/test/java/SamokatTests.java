@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -12,8 +13,24 @@ public class SamokatTests extends TestBase {
     MainPage mainPage = new MainPage();
 
     @Tag("smoke")
+    @DisplayName("Проверить элементы в хедере страницы")
     @Test
-    void checkMainPage() {
+    void checkHeaderComponent() {
+        step("Открыть главную страницу", () -> {
+            mainPage.openPage();
+        });
+        step("Check header menu elements", () -> {
+            mainPage.checkHeaderMenu();
+        });
+        step("Check side menu elements", () -> {
+            mainPage.checkSideMenu();
+        });
+    }
+
+    @Tag("smoke")
+    @DisplayName("Проверить элементы в боковом меню страницы")
+    @Test
+    void checkSideMenuComponent() {
         step("Open page", () -> {
             mainPage.openPage();
         });
@@ -22,6 +39,33 @@ public class SamokatTests extends TestBase {
         });
         step("Check side menu elements", () -> {
             mainPage.checkSideMenu();
+        });
+    }
+
+    @Tag("smoke")
+    @DisplayName("Проверить основные разделы страницы")
+    @Test
+    void checkMainChapters() {
+        step("Open page", () -> {
+            mainPage.openPage();
+        });
+        step("Check main page chapters", () -> {
+            mainPage.checkMainChapters();
+        });
+    }
+
+    @Tag("smoke")
+    @DisplayName("Проверить элементы в футере страницы")
+    @Test
+    void checkFooterComponent() {
+        step("Open page", () -> {
+            mainPage.openPage();
+        });
+        step("Check social media icons", () -> {
+            mainPage.checkSocialIcons();
+        });
+        step("Check store icons", () -> {
+            mainPage.checkStoreIcons();
         });
     }
 
@@ -42,12 +86,13 @@ public class SamokatTests extends TestBase {
     }
 
     @Tag("simple")
+    @DisplayName("Открыть \"Войти\" и проверить способы залогиниться")
     @Test
-    void checkLoginDrawer() {
+    void checkSignInDrawer() {
         step("Open page", () -> {
             mainPage.openPage();
         });
-        step("Open drawer and check elements", () -> {
+        step("Open sign in drawer and check elements", () -> {
             mainPage.openLoginDrawer();
         });
         step("Close drawer", () -> {

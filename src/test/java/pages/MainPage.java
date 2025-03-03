@@ -1,8 +1,6 @@
 package pages;
 
-import pages.components.HeaderMenuComponent;
-import pages.components.LoginDrawerComponent;
-import pages.components.SideMenuComponent;
+import pages.components.*;
 
 import static com.codeborne.selenide.Selenide.*;
 
@@ -11,6 +9,8 @@ public class MainPage {
     HeaderMenuComponent headerMenuComponent = new HeaderMenuComponent();
     SideMenuComponent sideMenuComponent = new SideMenuComponent();
     LoginDrawerComponent loginDrawerComponent = new LoginDrawerComponent();
+    ChaptersComponent chaptersComponent = new ChaptersComponent();
+    FooterMenuComponent footerMenuComponent = new FooterMenuComponent();
 
     public MainPage openPage() {
         open("/");
@@ -24,6 +24,21 @@ public class MainPage {
 
     public MainPage checkSideMenu() {
         sideMenuComponent.checkSideMenu();
+        return this;
+    }
+
+    public MainPage checkSocialIcons() {
+        footerMenuComponent.checkSocialIcons();
+        return this;
+    }
+
+    public MainPage checkStoreIcons() {
+        footerMenuComponent.checkStoreIcons();
+        return this;
+    }
+
+    public MainPage checkMainChapters() {
+        chaptersComponent.checkMainChapters();
         return this;
     }
 
