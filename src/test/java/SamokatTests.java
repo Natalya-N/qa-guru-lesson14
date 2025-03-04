@@ -22,9 +22,6 @@ public class SamokatTests extends TestBase {
         step("Check header menu elements", () -> {
             mainPage.checkHeaderMenu();
         });
-        step("Check side menu elements", () -> {
-            mainPage.checkSideMenu();
-        });
     }
 
     @Tag("smoke")
@@ -33,9 +30,6 @@ public class SamokatTests extends TestBase {
     void checkSideMenuComponent() {
         step("Open page", () -> {
             mainPage.openPage();
-        });
-        step("Check header menu elements", () -> {
-            mainPage.checkHeaderMenu();
         });
         step("Check side menu elements", () -> {
             mainPage.checkSideMenu();
