@@ -15,7 +15,7 @@ public class SamokatTests extends TestBase {
     @Tag("smoke")
     @DisplayName("Проверить элементы в хедере страницы")
     @Test
-    void checkHeaderComponent() {
+    void checkHeaderComponentTest() {
         step("Открыть главную страницу", () -> {
             mainPage.openPage();
         });
@@ -27,7 +27,7 @@ public class SamokatTests extends TestBase {
     @Tag("smoke")
     @DisplayName("Проверить элементы в боковом меню страницы")
     @Test
-    void checkSideMenuComponent() {
+    void checkSideMenuComponentTest() {
         step("Open page", () -> {
             mainPage.openPage();
         });
@@ -39,7 +39,7 @@ public class SamokatTests extends TestBase {
     @Tag("smoke")
     @DisplayName("Проверить основные разделы страницы")
     @Test
-    void checkMainChapters() {
+    void checkMainChaptersTest() {
         step("Open page", () -> {
             mainPage.openPage();
         });
@@ -51,7 +51,7 @@ public class SamokatTests extends TestBase {
     @Tag("smoke")
     @DisplayName("Проверить элементы в футере страницы")
     @Test
-    void checkFooterComponent() {
+    void checkFooterComponentTest() {
         step("Open page", () -> {
             mainPage.openPage();
         });
@@ -70,7 +70,7 @@ public class SamokatTests extends TestBase {
     })
     @ParameterizedTest(name = "Для поискового запроса {0} должен возвращаться не пустой список найденных продуктов")
     @Tag("simple")
-    void searchForProduct(String query) {
+    void searchForProductTest(String query) {
         step("Open page", () -> {
             mainPage.openPage();
         });
@@ -82,7 +82,7 @@ public class SamokatTests extends TestBase {
     @Tag("simple")
     @DisplayName("Открыть \"Войти\" и проверить способы залогиниться")
     @Test
-    void checkSignInDrawer() {
+    void checkSignInDrawerTest() {
         step("Open page", () -> {
             mainPage.openPage();
         });
