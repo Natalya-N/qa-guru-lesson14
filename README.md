@@ -48,18 +48,19 @@ browserSize (размер окна браузера, по умолчанию 192
 
 ## :bar_chart: Пример Allure отчета:
 
-Для просмотра перейти по [ссылке](https://jenkins.autotests.cloud/job/C32-nechaevanatalya-lesson14/8/allure/)
+Для просмотра перейти по [ссылке](https://jenkins.autotests.cloud/job/C32-nechaevanatalya-lesson14/10/)
 
-<img width="1425" alt="Снимок экрана 2025-03-08 в 16 14 20" src="https://github.com/user-attachments/assets/00c5ff94-f3ed-4cfc-a7d3-cc1c13c5275c" />
+<img width="1421" alt="Снимок экрана 2025-03-09 в 23 11 52" src="https://github.com/user-attachments/assets/ef77a9b0-84c7-4436-bff5-082381601c56" />
+
 
 Результат выполнения тестов:
-
-<img width="1425" alt="Снимок экрана 2025-03-08 в 16 41 11" src="https://github.com/user-attachments/assets/dcd37324-7426-417a-9b80-2361d065718e" />
-
+<img width="1435" alt="Снимок экрана 2025-03-09 в 23 12 14" src="https://github.com/user-attachments/assets/cb387226-2ab7-44bd-994e-1b89f89bb961" />
 
 
 ## :bell: Уведомления в Telegram с использованием бота:
 После завершения сборки Telegram-бот автоматически обрабатывает и отправляет сообщение с отчетом о прогоне тестов
-<img width="366" alt="Снимок экрана 2025-03-08 в 16 16 17" src="https://github.com/user-attachments/assets/8a2403eb-5370-463a-8a75-e45dce4dd2f0" />
+
+<img width="436" alt="Снимок экрана 2025-03-09 в 23 10 04" src="https://github.com/user-attachments/assets/49f9405e-51bb-4f47-bc6f-006ccddcbeca" />
+
 
 
