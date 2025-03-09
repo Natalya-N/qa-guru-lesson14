@@ -48,6 +48,8 @@ browserSize (размер окна браузера, по умолчанию 192
 
 ## :bar_chart: Пример Allure отчета:
 
+Для просмотра перейти по [ссылке](https://jenkins.autotests.cloud/job/C32-nechaevanatalya-lesson14/8/allure/)
+
 <img width="1425" alt="Снимок экрана 2025-03-08 в 16 14 20" src="https://github.com/user-attachments/assets/00c5ff94-f3ed-4cfc-a7d3-cc1c13c5275c" />
 
 Результат выполнения тестов:
