@@ -19,7 +19,8 @@ public class SamokatTests extends TestBase {
         step("Открыть главную страницу", () -> {
             mainPage.openPage();
         });
-        step("Check header menu elements", () -> {
+        step("Проверить, что в хедере отображаются: иконка Самоката, меню поиска, " +
+                "кнопка логина и кнопка открытия чата с поддержкой ", () -> {
             mainPage.checkHeaderMenu();
         });
     }
@@ -28,10 +29,10 @@ public class SamokatTests extends TestBase {
     @DisplayName("Проверить элементы в боковом меню страницы")
     @Test
     void checkSideMenuComponentTest() {
-        step("Open page", () -> {
+        step("Открыть главную страницу", () -> {
             mainPage.openPage();
         });
-        step("Check side menu elements", () -> {
+        step("Проверить, что в боковом меню отображается список разделов с продуктами", () -> {
             mainPage.checkSideMenu();
         });
     }
@@ -40,10 +41,10 @@ public class SamokatTests extends TestBase {
     @DisplayName("Проверить основные разделы страницы")
     @Test
     void checkMainChaptersTest() {
-        step("Open page", () -> {
+        step("Открыть главную страницу", () -> {
             mainPage.openPage();
         });
-        step("Check main page chapters", () -> {
+        step("Проверить, что в теле главной страницы отображаются разделы сайта", () -> {
             mainPage.checkMainChapters();
         });
     }
@@ -52,13 +53,13 @@ public class SamokatTests extends TestBase {
     @DisplayName("Проверить элементы в футере страницы")
     @Test
     void checkFooterComponentTest() {
-        step("Open page", () -> {
+        step("Открыть главную страницу", () -> {
             mainPage.openPage();
         });
-        step("Check social media icons", () -> {
+        step("Проверить, что отображаются иконки соц сетей", () -> {
             mainPage.checkSocialIcons();
         });
-        step("Check store icons", () -> {
+        step("Проверить, что отображаются иконки магазинов приложений", () -> {
             mainPage.checkStoreIcons();
         });
     }
@@ -71,10 +72,10 @@ public class SamokatTests extends TestBase {
     @ParameterizedTest(name = "Для поискового запроса {0} должен возвращаться не пустой список найденных продуктов")
     @Tag("simple")
     void searchForProductTest(String query) {
-        step("Open page", () -> {
+        step("Открыть главную страницу", () -> {
             mainPage.openPage();
         });
-        step("Search for product", () -> {
+        step("Выполнить поиск по продукту", () -> {
             mainPage.searchForProduct(query);
         });
     }
@@ -83,13 +84,13 @@ public class SamokatTests extends TestBase {
     @DisplayName("Открыть \"Войти\" и проверить способы залогиниться")
     @Test
     void checkSignInDrawerTest() {
-        step("Open page", () -> {
+        step("Открыть главную страницу", () -> {
             mainPage.openPage();
         });
-        step("Open sign in drawer and check elements", () -> {
+        step("Открыть дровер и проверить, что отображаются элементы для логина", () -> {
             mainPage.openLoginDrawer();
         });
-        step("Close drawer", () -> {
+        step("Закрыть дровер", () -> {
             mainPage.closeLoginDrawer();
         });
     }

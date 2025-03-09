@@ -4,6 +4,7 @@ import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.Map;
@@ -20,7 +21,6 @@ public class TestBase {
         Configuration.browserVersion = System.getProperty("browserVersion", "120");
         Configuration.remote = "https://user1:1234@" + System.getProperty("remoteHost") + "wd/hub";
         Configuration.pageLoadStrategy = "eager";
-        SelenideLogger.addListener("allure", new AllureSelenide());
         Configuration.timeout = 10000;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -29,6 +29,11 @@ public class TestBase {
                 "enableVideo", true
         ));
         Configuration.browserCapabilities = capabilities;
+    }
+
+    @BeforeEach
+    static void beforeEach() {
+        SelenideLogger.addListener("allure", new AllureSelenide());
     }
 
 
