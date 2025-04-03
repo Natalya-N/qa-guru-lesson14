@@ -8,7 +8,6 @@ public class MainPageElementsTests extends TestBase {
 
     MainPage mainPage = new MainPage();
 
-
     @Tag("smoke")
     @DisplayName("Проверить элементы в хедере страницы")
     @Test
