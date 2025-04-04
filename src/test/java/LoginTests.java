@@ -1,9 +1,10 @@
+import io.qameta.allure.Epic;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.MainPage;
 
-
+@Epic("Проверка дровера со способами логина")
 @Tag("regress")
 public class LoginTests extends TestBase {
 
