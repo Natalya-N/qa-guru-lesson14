@@ -12,7 +12,9 @@ public class MainPage {
     LoginDrawerComponent loginDrawerComponent = new LoginDrawerComponent();
     ChaptersComponent chaptersComponent = new ChaptersComponent();
     FooterMenuComponent footerMenuComponent = new FooterMenuComponent();
-
+    LocationPopUpComponent locationPopUpComponent = new LocationPopUpComponent();
+    ChooseAddressDrawerComponent chooseAddressDrawerComponent = new ChooseAddressDrawerComponent();
+    CartComponent cartComponent = new CartComponent();
 
     @Step("Открыть главную страницу")
     public MainPage openPage() {
@@ -20,8 +22,8 @@ public class MainPage {
         return this;
     }
 
-    @Step("Проверить, что в хедере отображаются: иконка Самоката, меню поиска, \" +\n" +
-            "                \"кнопка логина и кнопка открытия чата с поддержкой ")
+    @Step("Проверить, что в хедере отображаются: иконка Самоката, меню поиска, " +
+            "кнопка логина и кнопка открытия чата с поддержкой ")
     public MainPage checkHeaderMenu() {
         headerMenuComponent.checkHeaderMenu();
         return this;
@@ -68,6 +70,31 @@ public class MainPage {
     @Step("Закрыть дровер логина")
     public MainPage closeLoginDrawer() {
         loginDrawerComponent.closeLoginDrawer();
+        return this;
+    }
+
+    @Step("Открыть дровер выбора адреса")
+    public MainPage openChooseAddressDrawer() {
+        locationPopUpComponent.openChooseAddressDrawer();
+        chooseAddressDrawerComponent.checkAddressDrawerAppears();
+        return this;
+    }
+
+    @Step("Выбрать адрес")
+    public MainPage chooseAddress(String city, String address) {
+        chooseAddressDrawerComponent.chooseAddress(city, address);
+        return this;
+    }
+
+    @Step("Проверить наличие продукта в корзине")
+    public MainPage checkProductInCart(String name) {
+        cartComponent.checkProduct(name);
+        return this;
+    }
+
+    @Step("Удалить продукт из корзины")
+    public MainPage deleteProductFromCart(String name) {
+        cartComponent.checkProduct(name);
         return this;
     }
 

@@ -8,16 +8,24 @@ public class ProductCardDrawerPage {
 
     ProductCardDrawerComponent productCardDrawer = new ProductCardDrawerComponent();
 
-    @Step("Открыть поп-ап страницу продукта")
+    @Step("Открыть дровер продукта")
     public ProductCardDrawerPage openDrawerProductPage(String id) {
         open("/product/" + id);
         return this;
     }
 
-    @Step("")
+    @Step("Проверить название, состав и срок годности продукта")
     public ProductCardDrawerPage checkProductInformation(String name, String compound, String bestBefore) {
         productCardDrawer.checkProductInformation(name, compound, bestBefore);
         return this;
     }
+
+    @Step("Добавить продукт в корзину")
+    public ProductCardDrawerPage clickAddToCartButton() {
+        productCardDrawer.clickAddToCartButton();
+        productCardDrawer.closeDrawer();
+        return this;
+    }
+
 
 }

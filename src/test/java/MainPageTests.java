@@ -7,7 +7,7 @@ import pages.MainPage;
 
 @Epic("Главная страница")
 @Tag("regress")
-public class MainPageElementsTests extends TestBase {
+public class MainPageTests extends TestBase {
 
     MainPage mainPage = new MainPage();
 
