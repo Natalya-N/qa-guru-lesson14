@@ -26,20 +26,17 @@
 
 
 ## :white_check_mark: Реализованные проверки:
-Проверка элементов в хедере страницы  
-Проверка элементов в боковом меню страницы  
-Проверка основных разделов страницы  
-Проверка элементов в футере страницы  
+Проверка наличия элементов на главной странице
 Параметризированная проверка поиска по каталогу  
 Проверка страницы логина  
+Проверка добавления и удаления продукта из корзины
 
 ## :arrow_forward: Сборка в Jenkins:
 Перейти по [ссылке](https://jenkins.autotests.cloud/job/C32-nechaevanatalya-lesson14/)
 
 Для запуска сборки необходимо кликнуть на "Build with parameters"
 
-<img width="1419" alt="Снимок экрана 2025-03-08 в 16 11 55" src="https://github.com/user-attachments/assets/b80106e8-612a-4334-a594-a9832857f550" />
-
+<img width="1412" alt="Снимок экрана 2025-04-05 в 16 34 12" src="https://github.com/user-attachments/assets/41f9b4b5-419e-4ea5-aacc-ec40e8f4fdec" />
 
 ## :label: Параметры сборки в Jenkins:
 browser (браузер, по умолчанию chrome)  
@@ -48,13 +45,11 @@ browserSize (размер окна браузера, по умолчанию 192
 
 ## :bar_chart: Пример Allure отчета:
 
-Для просмотра перейти по [ссылке](https://jenkins.autotests.cloud/job/C32-nechaevanatalya-lesson14/10/)
-
-<img width="1421" alt="Снимок экрана 2025-03-09 в 23 11 52" src="https://github.com/user-attachments/assets/ef77a9b0-84c7-4436-bff5-082381601c56" />
-
+Для просмотра перейти по [ссылке](https://jenkins.autotests.cloud/job/C32-nechaevanatalya-lesson14/28/console)
 
 Результат выполнения тестов:
-<img width="1435" alt="Снимок экрана 2025-03-09 в 23 12 14" src="https://github.com/user-attachments/assets/cb387226-2ab7-44bd-994e-1b89f89bb961" />
+<img width="1437" alt="Снимок экрана 2025-04-05 в 16 33 10" src="https://github.com/user-attachments/assets/c9d894ce-8299-4aa5-b38f-902dff4bac63" />
+
 
 Видео с выполнением одного из тестов:
 ![allure-result.gif](images/gif/allure-result.gif)
@@ -62,7 +57,8 @@ browserSize (размер окна браузера, по умолчанию 192
 ## :bell: Уведомления в Telegram с использованием бота:
 После завершения сборки Telegram-бот автоматически обрабатывает и отправляет сообщение с отчетом о прогоне тестов
 
-<img width="436" alt="Снимок экрана 2025-03-09 в 23 10 04" src="https://github.com/user-attachments/assets/49f9405e-51bb-4f47-bc6f-006ccddcbeca" />
+<img width="440" alt="Снимок экрана 2025-04-05 в 16 35 31" src="https://github.com/user-attachments/assets/86b5a8d6-5f52-4048-b8f9-555b7345c164" />
+
 
 
 
