@@ -87,14 +87,20 @@ public class MainPage {
     }
 
     @Step("Проверить наличие продукта в корзине")
-    public MainPage checkProductInCart(String name) {
-        cartComponent.checkProduct(name);
+    public MainPage checkProductInCart(String id, String name) {
+        cartComponent.checkProduct(id, name);
         return this;
     }
 
     @Step("Удалить продукт из корзины")
     public MainPage deleteProductFromCart(String name) {
-        cartComponent.checkProduct(name);
+        cartComponent.deleteProduct(name);
+        return this;
+    }
+
+    @Step("Проверить, что корзина пустая")
+    public MainPage checkCartIsEmpty() {
+        cartComponent.checkCartIsEmpty();
         return this;
     }
 

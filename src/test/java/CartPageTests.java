@@ -24,16 +24,17 @@ public class CartPageTests extends TestBase {
     @CsvFileSource(resources = "/productsIdList.csv", delimiter = ';')
     @Story("Добавление и удаление продуктов в корзину")
     @Tag("smoke")
-    @DisplayName("Проверить добавление и удаление продуктов из корзины")
+    @DisplayName("Проверить добавление и удаление продукта из корзины")
     @ParameterizedTest
-    void addAndDeleteProductsTest(String product, String productName) {
+    void addAndDeleteProductsTest(String id, String name) {
         mainPage.openPage();
         mainPage.openChooseAddressDrawer();
         mainPage.chooseAddress(CITY, ADDRESS);
-        productCardPage.openDrawerProductPage(product);
+        productCardPage.openDrawerProductPage(id);
         productCardPage.clickAddToCartButton();
-        mainPage.checkProductInCart(product);
-
+        mainPage.checkProductInCart(id, name);
+        mainPage.deleteProductFromCart(id);
+        mainPage.checkCartIsEmpty();
 
     }
 
