@@ -16,7 +16,7 @@ public class TestBase {
     @BeforeAll
     static void setupConfiguration() {
         Configuration.baseUrl = "https://samokat.ru";
-        Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
+        /*Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserVersion = System.getProperty("browserVersion", "128");
         Configuration.remote = "https://" + System.getProperty("remoteHost") + "wd/hub";
@@ -28,7 +28,7 @@ public class TestBase {
                 "enableVNC", true,
                 "enableVideo", true
         ));
-        Configuration.browserCapabilities = capabilities;
+        Configuration.browserCapabilities = capabilities;*/
     }
 
     @BeforeEach
